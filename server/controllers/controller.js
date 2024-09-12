@@ -157,9 +157,12 @@ const controller = {
   async home(req,res,next){
     
     const data =  await schemas.list.find({});
-    res.locals.lists = data
-    next;
-  }
+    res.locals.lists = data;
+    console.log('alldata', data);
+    return next();
+  },
+
+ 
 };
 
 module.exports = controller;

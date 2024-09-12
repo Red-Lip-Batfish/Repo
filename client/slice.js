@@ -34,6 +34,7 @@ const listsSlice = createSlice({
     // action payload: newListId, fetched in the corresponding thunk
     createList(state, action) {
       console.log('in createList action');
+      // console.log('action.payload', action.payload)
       state.lists.push({...blankList, _id: action.payload});
     },
     // action payload: list object 
@@ -47,7 +48,7 @@ const listsSlice = createSlice({
     },
     // action payload: updated lists array 
     deleteList(state, action) {
-      
+      console.log('delete action payload', action.payload)
       state.lists = action.payload;
     },
     // action payload: 

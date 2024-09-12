@@ -1,5 +1,6 @@
 import React from 'react';
-import { useNavigate, Link, useLocation } from "react-router-dom";
+
+import { useNavigate, Link, useLocation } from 'react-router-dom';
 
 // define the task component
 const Task = (props) => {
@@ -21,7 +22,7 @@ const Task = (props) => {
         <option></option>
         <option></option>
       </select>
-      <button>Add Task</button>
+      <button>Save Task</button>
       <button>Delete Task</button>
     </div>
   )
