@@ -4,7 +4,7 @@ mongoose.pluralize(null);
 const Schema = mongoose.Schema;
 
 const MONGO_URI =
-  'mongodb+srv://zacharythejesus:MQ5qEWGEEZgX8nLj@pm-app.k8txydl.mongodb.net/?retryWrites=true&w=majority';
+  'mongodb+srv://project:12345@todocalendar.dvd0e.mongodb.net/?retryWrites=true&w=majority';
 
 mongoose
   .connect(MONGO_URI, {
@@ -27,6 +27,9 @@ const personSchema = new Schema({
     type: String,
     required: true,
   },
+  lists: {
+    type: Array
+  }
 });
 
 const people = mongoose.model('people', personSchema);
@@ -51,7 +54,6 @@ const listSchema = new Schema({
     type: Array,
     default: [],
   },
-  team: String
 });
 
 const list = mongoose.model('list', listSchema);
